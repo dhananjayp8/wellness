@@ -5,24 +5,30 @@
   font-family: "Avenir", "Avenir Next", sans-serif;
 }
 .inner-wellness-container {
-  width: 90%;
+  width: 100%;
   margin: 1rem auto;
 }
 .wellness-top {
   display: flex;
   justify-content: space-between;
+  /* background-color: white; */
+  padding: 1.2rem;
+  width: 100%;
 }
 .wellness-div {
-  width: 45%;
+  width: 48%;
   height: 50vh;
+  margin-top: 1rem;
   border: 1px solid white;
   color: white;
+  background-color: white;
 }
 .tips {
-  width: 100%;
+  width: 95%;
   background-color: #0070c0;
   margin-top: 1rem;
   padding: 0.5rem;
+  margin: 1rem auto;
   color: white;
   /* border: 1px solid black; */
   border-radius: 4px;
@@ -49,4 +55,243 @@
   align-items: center;
   border-radius: 50%;
   margin: 5px;
+}
+.progress-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
+.progress-wrapper {
+  text-align: center;
+  position: relative;
+  background-color: white;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00b0f0 0deg,
+    #00b0f0 var(--progress),
+    #ddd var(--progress) 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background: conic-gradient(#00b0f0 var(--progress, 0%), #ddd 0%);
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.progress-text {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 800;
+  color: black;
+  text-anchor: middle;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 10;
+}
+
+.progress {
+  fill: none;
+  stroke: #00b0f0;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: calc(314 - (75 / 100) * 314);
+  transform-origin: center;
+}
+
+/* .progress-container {
+  margin-bottom: 2rem;
+} */
+.product-description {
+  color: #4f4f4f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+}
+
+.progress-text {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  background: transparent;
+  z-index: 1;
+}
+.progress-subtext {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.6rem;
+  color: black;
+  z-index: 1;
+  background-color: white;
+}
+
+.progress-80 {
+  --progress: 80%;
+}
+
+.progress-50 {
+  --progress: 50%;
+}
+.progress-10 {
+  --progress: 10%;
+}
+.progress-20 {
+  --progress: 20%;
+}
+.progress-30 {
+  --progress: 30%;
+}
+.progress-40 {
+  --progress: 40%;
+}
+.progress-60 {
+  --progress: 60%;
+}
+.progress-70 {
+  --progress: 70%;
+}
+.progress-90 {
+  --progress: 90%;
+}
+.progress-100 {
+  --progress: 100%;
+}
+
+@media (max-width: 768px) {
+  .progress-text {
+    font-size: 12px;
+  }
+
+  .progress-container {
+    width: 100%;
+    gap: 5px;
+  }
+  .progress-wrapper {
+    width: 45px;
+    height: 38px;
+    margin-bottom: 2rem;
+    /* margin-right: 1rem; */
+  }
+
+  .progress-description {
+    font-size: 15px;
+    text-align: center;
+  }
+  .progress-circle {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  .progress-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+  .progress-circle::before {
+    width: 50px;
+    height: 50px;
+  }
+  .progress-text {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .progress-circle {
+    width: 115px;
+    height: 115px;
+  }
+  .progress-text {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 600px) {
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .progress-circle::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .progress-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .progress-circle::before {
+    width: 70px;
+    height: 70px;
+  }
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .progress-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
 }

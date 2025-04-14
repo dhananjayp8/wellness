@@ -1,0 +1,178 @@
+<div class="badgeContainer">
+                  <div class="badge">
+                    <template lwc:if={surveyDetails.peopleScore}>
+                      <span class="wwScoreContainer1">
+                        <span class={wwScorePeople_css}>
+                          <span class="wwScoreText peopleText">
+                            <p class="wwScoreNumber">{surveyDetails.peopleScore}</p>
+                            <p>People</p>
+                          </span>
+                        </span>
+                      </span>
+                    </template>
+                    <template lwc:if={surveyDetails.cultureScore}>
+                      <span class="wwScoreContainer1">
+                        <span class={wwScoreCulture_css}>
+                          <span class="wwScoreText cultureText">
+                            <p class="wwScoreNumber">{surveyDetails.cultureScore}</p>
+                            <p>Culture</p>
+                          </span>
+                        </span>
+                      </span>
+                    </template>   
+                    <template lwc:if={surveyDetails.processScore}>
+                      <span class="wwScoreContainer1">
+                        <span class={wwScoreProcess_css}>
+                          <span class="wwScoreText processText">
+                            <p class="wwScoreNumber">{surveyDetails.processScore}</p>
+                            <p>Process</p>
+                          </span>
+                        </span>
+                      </span>
+                    </template>   
+                  </div>
+                  <div class="badge">          
+                    <template lwc:if={surveyDetails.technologyScore}>
+                      <span class="wwScoreContainer1">
+                        <span class={wwScoreTechnology_css}>
+                          <span class="wwScoreText technologyText">
+                            <p class="wwScoreNumber">{surveyDetails.technologyScore}</p>
+                            <p>Technology</p>
+                          </span>
+                        </span>
+                      </span>
+                    </template>  
+                    <template lwc:if={surveyDetails.analyticsScore}>
+                      <span class="wwScoreContainer1">
+                        <span class={wwScoreAnalytics_css}>
+                          <span class="wwScoreText analyticsText">
+                            <p class="wwScoreNumber">{surveyDetails.analyticsScore}</p>
+                            <p>Analytics</p>
+                          </span>
+                        </span>
+                      </span>
+                    </template>                      
+                    
+                  </div>
+                </div> 
+
+
+
+                <div class="progress-container">
+                  <div class="progress-wrapper">
+                    <div class="progress-circle progress-90">
+                      <span class="progress-text">9</span>
+                    </div>
+                    <p class="progress-description">Stress Level</p>
+                  </div>
+                  <div class="progress-wrapper">
+                    <div class="progress-circle progress-90">
+                      <span class="progress-text">9</span>
+                    </div>
+                    <p class="progress-description">Focus Quality</p>
+                  </div>
+                  <div class="progress-wrapper">
+                    <div class="progress-circle progress-90">
+                      <span class="progress-text">9</span>
+                    </div>
+                    <p class="progress-description">Time in Flow</p>
+                  </div>
+                </div>
+
+
+
+
+                Css 
+              .progress-wrapper{
+    width:30% !important;
+    margin-right: 0 !important;
+    padding-left: 3% !important;
+  }
+  .progress-container {
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top:25px !important;
+  }
+  .progress-circle {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1rem !important;
+    margin: 0 auto !important;
+  }
+  .progress-circle::before {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .progress-text {
+    font-size: 1.2rem !important;
+  }
+  .progress-description {
+    font-size: 10px !important;
+    font-weight: 600;
+    margin-top: 8px;
+    color: #00b0f0;
+    width:100% !important;
+  }
+}
+
+.downloadIcon
+{
+  height: 20px;
+  margin-top: -2px;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00b0f0 0deg,
+    #00b0f0 var(--progress),
+    #ddd var(--progress) 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+}
+
+.progress-wrapper {
+  height: 100px;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+
+.progress-text {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: black;
+  text-anchor: middle;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-top:120px;
+}
+
+.progress-description{
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+}
