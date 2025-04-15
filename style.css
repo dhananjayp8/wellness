@@ -59,9 +59,10 @@
 .progress-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
   justify-items: center;
   gap: 2rem;
-  padding-top: 3rem;
+  padding: 4rem 0 0.3rem 0.3rem;
   max-width: 800px;
   margin: auto;
   background-color: white;
@@ -72,6 +73,38 @@
   position: relative;
   background-color: white;
 }
+.progress-wrapper:nth-child(4),
+.progress-wrapper:nth-child(5) {
+  grid-column: span 1;
+}
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* spacing between the 4th and 5th wrapper */
+}
+/* .progress-wrapper:nth-child(4) {
+  grid-column-start: 2;
+}
+
+.progress-wrapper:nth-child(5) {
+  grid-column-start: 3;
+} */
+
+/* .progress-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  justify-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 
 .progress-circle {
   width: 120px;
@@ -234,8 +267,12 @@
 @media (max-width: 768px) {
   .progress-container {
     width: 100%;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: left;
+    gap: 2rem;
+    padding: 4rem 0 0.3rem 0.3rem;
   }
   .progress-circle {
     width: 60px;
